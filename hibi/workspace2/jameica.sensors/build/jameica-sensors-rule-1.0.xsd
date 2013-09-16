@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!--
+  $Revision: 1.2 $
+  $Date: 2010/03/01 22:44:48 $
+  $Author: willuhn $
+ 
+  Copyright (c) by willuhn software & services
+  All rights reserved
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+  
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+-->
+
+<xsd:schema xml:lang="DE" elementFormDefault="qualified"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://www.willuhn.de/schema/jameica-sensors-rule"
+  xmlns:tns="http://www.willuhn.de/schema/jameica-sensors-rule">
+
+  <xsd:annotation>
+     <xsd:documentation>
+       XML-Spezifikation des XML-Formats fuer Regel-Dateien zur Benachrichtigung.
+     </xsd:documentation>
+  </xsd:annotation>
+
+  <!-- Root-Element //-->
+  <xsd:element name="rules" type="tns:rulesType" />
+
+  <!-- Element "rules" //-->
+  <xsd:complexType name="rulesType">
+    <xsd:annotation>
+      <xsd:documentation>Root-Element einer rules.xml</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="rule" type="tns:ruleType" minOccurs="1" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+  <!-- Element "rule" //-->
+  <xsd:complexType name="ruleType">
+    <xsd:annotation>
+      <xsd:documentation>Element fuer eine einzelne Regel</xsd:documentation>
+    </xsd:annotation>
+    <xsd:all>
+      <xsd:annotation>
+        <xsd:documentation>Kriterien der Regel</xsd:documentation>
+      </xsd:annotation>
+      
+      <xsd:element name="sensor" type="xsd:string" minOccurs="1" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>UUID des Sensors</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+
+      <xsd:element name="limit" type="xsd:string" minOccurs="1" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>Der Grenzwert, ab dem die Benachrichtigung erfolgt</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+
+      <xsd:element name="operator" type="xsd:string" minOccurs="1" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>Name der Java-Klasses des Operators</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+
+      <xsd:element name="notifier" type="xsd:string" minOccurs="1" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>Name der Java-Klasses des Notifiers</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+
+      <xsd:element name="params" type="tns:paramsType" minOccurs="0" maxOccurs="1" />
+
+    </xsd:all>
+  </xsd:complexType>
+
+
+  <!-- Element "params" //-->
+  <xsd:complexType name="paramsType">
+    <xsd:annotation>
+      <xsd:documentation>Container fuer die optionalen Parameter</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:annotation>
+        <xsd:documentation>Liste der Parameter</xsd:documentation>
+      </xsd:annotation>
+      <xsd:element name="param" type="tns:paramType" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <!-- Element "param" //-->
+  <xsd:complexType name="paramType">
+    <xsd:annotation>
+      <xsd:documentation>Ein einzelner Parameter</xsd:documentation>
+    </xsd:annotation>
+    <xsd:attribute name="name" type="xsd:string" use="required">
+      <xsd:annotation>
+        <xsd:documentation>Name des Parameters</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+    <xsd:attribute name="value" type="xsd:string" use="required">
+      <xsd:annotation>
+        <xsd:documentation>Wert des Parameters</xsd:documentation>
+      </xsd:annotation>
+    </xsd:attribute>
+  </xsd:complexType>
+
+</xsd:schema>

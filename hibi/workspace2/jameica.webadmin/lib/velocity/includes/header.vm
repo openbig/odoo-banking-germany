@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+  <head>
+    <title>[$application.host.name] Jameica Management Console $application.version.version</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel="stylesheet" type="text/css" href="/webadmin/css/styles.css">
+    <script language="JavaScript" src="/webadmin/js/common.js" type="text/javascript"></script>
+    <script language="JavaScript" src="/webadmin/js/dtree.js"  type="text/javascript"></script>
+  </head>
+  
+  <body>
+  
+    <div>
+      <div style="background-position: 0px 15px; background-image: url('/webadmin/img/jameica.png'); height:65px; background-repeat: no-repeat;"></div>
+      <h1>Jameica Management Console</h1>
+      

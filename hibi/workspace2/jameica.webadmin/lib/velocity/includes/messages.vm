@@ -1,0 +1,15 @@
+#set($list = $application.welcome)
+
+#if($list.length() > 0)
+  #set($size = $list.length() - 1)
+
+  <h2>System-Nachrichten</h2>
+
+  <ul class="navi">
+  #foreach($i in [0..$size])
+    #set($line = $list.get($i))
+    <li><a>${line}</a></li>
+  #end
+  </ul>
+#end
+

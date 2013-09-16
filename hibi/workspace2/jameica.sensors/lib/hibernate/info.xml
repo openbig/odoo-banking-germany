@@ -1,0 +1,6 @@
+<info>
+  <name>hibernate</name>
+  <description>hibernate - Relational Persistence for Idiomatic Java</description>
+  <url>http://www.hibernate.org/</url>
+  <license>LGPL - http://www.gnu.org/licenses/lgpl.html</license>
+</info>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<plugin name="jameica.update" version="2.5.0" class="de.willuhn.jameica.update.Plugin"
+  xmlns="http://www.willuhn.de/schema/jameica-plugin"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.willuhn.de/schema/jameica-plugin ">
+
+
+  <description>Online-Updates für Jameica</description>
+  <url>https://www.willuhn.de/projects/jameica/releases/nightly/jameica.update-2.5.0-nightly.zip</url>
+  <homepage>http://www.willuhn.de/projects/jameica</homepage>
+  <license>GPL - http://www.gnu.org/copyleft/gpl.html</license>
+
+  <requires jameica="2.3.0+" />
+
+  <classfinder>
+    <include>jameica\.update\.jar</include>
+    <include>.*\.class</include>
+  </classfinder>
+  
+  <services>
+    <service name="repository" autostart="true" class="de.willuhn.jameica.update.rmi.RepositoryService"/>
+    <service name="update"     autostart="true" class="de.willuhn.jameica.update.rmi.UpdateService" depends="repository" />
+  </services>
+  
+  <extensions>
+    <extension class="de.willuhn.jameica.update.ext.SettingsView"
+             extends="de.willuhn.jameica.gui.internal.views.Settings"/>
+  </extensions>
+</plugin>
+

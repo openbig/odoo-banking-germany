@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rules xmlns:wt="http://www.willuhn.de/schema/jameica-sensors-rule"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.willuhn.de/schema/jameica-sensors-rule http://www.willuhn.de/schema/jameica-sensors-rule-1.0.xsd ">
+
+
+  <!-- Vorlauf zu kalt -->
+  <rule>
+    <sensor>waterkotte.ai1.wpcu.device.temp.heater.out.real</sensor>
+    <limit>17.0</limit> <!-- Sommer 17.0, Winter 20.0 //-->
+    <operator>de.willuhn.jameica.sensors.notify.operator.SmallerThan</operator>
+
+    <notifier>de.willuhn.jameica.sensors.notify.notifier.Mail</notifier>
+    <params>
+      <param name="mail.sender" value="info@willuhn.de" />
+      <param name="mail.recipients" value="info@willuhn.de" />
+    </params>
+  </rule>
+
+  <!-- Ruecklauf zu kalt -->
+  <rule>
+    <sensor>waterkotte.ai1.wpcu.device.temp.heater.return.real</sensor>
+    <limit>18.5</limit> <!-- Sommer 18.5, Winter 21.0 //-->
+    <operator>de.willuhn.jameica.sensors.notify.operator.SmallerThan</operator>
+
+    <notifier>de.willuhn.jameica.sensors.notify.notifier.Mail</notifier>
+    <params>
+      <param name="mail.sender" value="info@willuhn.de" />
+      <param name="mail.recipients" value="info@willuhn.de" />
+    </params>
+  </rule>
+
+</rules>

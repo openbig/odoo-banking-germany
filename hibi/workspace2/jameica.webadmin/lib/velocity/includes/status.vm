@@ -1,0 +1,23 @@
+<h2>System-Status</h2>
+<table class="data">
+  <tr>
+    <td>Host</td>
+    <td>$application.host.name</td>
+  </tr>
+  <tr>
+    <td>Version</td>
+    <td>$application.version.version</td>
+  </tr>
+  <tr>
+    <td>Uptime</td>
+    <td>$application.uptime.uptime</td>
+  </tr>
+  <tr>
+    <td>Server-Start</td>
+    <td>$application.uptime.started</td>
+  </tr>
+  <tr>
+    <td>Arbeitsverzeichnis</td>
+    <td>$application.config.dir.work</td>
+  </tr>
+</table>

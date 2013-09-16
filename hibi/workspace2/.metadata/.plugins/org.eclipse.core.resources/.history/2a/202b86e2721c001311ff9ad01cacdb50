@@ -1,0 +1,60 @@
+#parse("includes/header.vm")
+
+<style>
+    table.data td.keystatus-false {
+       padding                  : 1px 1px 1px 25px;
+       color                    : #6E1416;
+       background-image         : url('/webadmin/img/status-error.png');
+       background-repeat        : no-repeat;
+    }
+    table.data td.keystatus-true {
+       padding                  : 1px 1px 1px 25px;
+       color                    : #46824A;
+       background-image         : url('/webadmin/img/status-ok.png');
+       background-repeat        : no-repeat;
+    }
+</style>
+
+<script type="text/javascript">
+  
+  function doDelete(v)
+  {
+    if (!window.confirm("Sicher?\n" +
+                        "Hierbei wird nur die Schlüsseldatei gelöscht.\n" +
+                        "Die Konten, Umsätze und Aufträge bleiben erhalten."))
+      return;
+    document.form1.elements.action.value = "delete";
+    document.form1.elements.key.value = v;
+    document.form1.submit();
+  }
+
+</script>
+
+
+<div id="breadcrumbs">
+  <a href="/hibiscus/">Home</a>
+</div>
+
+
+<h3>Kontern importieren</h3>
+
+<form method="post" name="form2" enctype="multipart/form-data">
+
+  <table class="data">	
+    <tr>
+      <th>Name</th>
+      <th>Wert</th>
+    </tr>
+  	<tr>
+  		<td>Hibiscus format XML-file</td>
+  		<td><input type="file" name="filename" /></td>
+  	</tr>
+  	<tr>
+  		<td>&nbsp;</td>
+  		<td><input type="submit" value="Importieren..." onclick="alert('a');"></td>
+  	</tr>
+  </table>
+</form>
+
+#parse("includes/footer.vm")
+

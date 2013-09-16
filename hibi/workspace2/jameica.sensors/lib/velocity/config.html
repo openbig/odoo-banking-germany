@@ -1,0 +1,44 @@
+#parse("includes/header.vm")
+
+<div id="breadcrumbs">
+  <a href="/sensors/">Home</a>
+</div>
+
+<h2>Configuration</h2>
+
+<form method="post">
+  <input type="hidden" name="action" value="save" />
+
+  <table class="data">
+    #foreach($config in $c.configs)
+      <tr>
+        <th colspan="2">$config.name</th>
+      </tr>
+      #foreach($param in $config.parameters)
+        <tr>
+          <td>
+            <b>$param.name</b><br/>
+            $param.description
+          </td>
+          <td>
+            <input style="width: 400px" type="text" name="$param.uuid" value="$!param.value" />
+          </td>
+        </tr>
+      #end
+    #end
+    
+    <tr>
+      <td class="footer" colspan="2">
+        <input type="submit" value="save settings" />
+      </td>
+    </tr>
+  </table>
+</form>
+
+#if($c.status)
+  <div class="note">
+    $c.status
+  </div>
+#end
+
+#parse("includes/footer.vm")

@@ -1,0 +1,83 @@
+<form method="post" action="/webadmin/rest/server/add">
+
+  <table class="data">
+    <tr>
+      <th colspan="2">Weitere Jameica-Server</th>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <script type="text/javascript" language="JavaScript">
+          a = new dTree('a');
+          a.config.useCookies=true;
+          a.add(0,-1,'Katalog','');
+        
+          #set($servers = $server.list)
+          #if($servers.length() > 0)
+            #set($size = $servers.length() - 1)
+            #foreach($i in [0..$size])
+              #set($current = $servers.get($i))
+              #set($num = $i + 1)
+              
+              a.add(${num}00,0,"$current.name","$current.url");
+              
+              #set($plugins = $server.execute($current.name,'/rest/plugins/list'))
+              #if($plugins.length() > 0)
+                #set($size2 = $plugins.length() - 1)
+                #foreach($k in [0..$size2])
+                  #set($current2 = $plugins.get($k))
+                  #set($num2 = $k + 1)
+
+                  a.add(${num}${num2}0,${num}00,"$current2.name","$current.url/plugin.html?plugin=$current2.name","$current2.description");
+
+                  #set($services = $server.execute($current.name,"/rest/plugins/$current2.name/services/list"))
+                  #if($services.length() > 0)
+                    #set($size3 = $services.length() - 1)
+                    #foreach($m in [0..$size3])
+                      #set($current3 = $services.get($m))
+                      #set($num3 = $m + 1)
+
+                      #set($icon = 'media-playback-start.png')
+                      #set($status = 'service running')
+                      #if($current3.started == 'false')
+                        #set($status = 'media-playback-stop.png')
+                        #set($status = 'service stopped')
+                      #end
+                      a.add(${num}${num2}${num3},${num}${num2}0,"$current3.name",'#',"$status",'',"/webadmin/img/$icon");
+                    #end
+                  #end
+                #end
+              #end
+            #end
+          #end
+
+          a.closeAll();
+          document.write(a);
+        </script>
+        <br/>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"><b>Jameica-Server hinzufügen</b></td>
+    </tr>
+    <tr>
+      <td>Hostname</td>
+      <td><input type="text" name="host"></td>
+    </tr>
+    <tr>
+      <td>TCP-Port</td>
+      <td><input type="text" name="port" value="8080"></td>
+    </tr>
+    <tr>
+      <td>Master-Passwort</td>
+      <td><input type="password" name="password"></td>
+    </tr>
+    <tr>
+      <td>SSL verwenden?</td>
+      <td><input name="ssl" type="checkbox" value="true" checked></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" value="Speichern"/></td>
+    </tr>
+  </table>
+</form>

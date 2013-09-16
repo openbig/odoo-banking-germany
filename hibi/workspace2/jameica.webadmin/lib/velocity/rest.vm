@@ -1,0 +1,95 @@
+#parse("includes/header.vm")
+
+<style>
+  div.service {
+    border: 1px dotted #909090;
+    background-color: #f9f9f9;
+    background-image: url("/webadmin/img/panel-gray.gif");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    margin-bottom: 20px;
+  }
+  div.service h1 {
+    background-color: #ECE7E5;
+    border-bottom: 1px dotted #909090;
+    color: #000000;
+    font-weight: bold;
+    font-size: 10pt;
+    margin: 0px;
+    padding: 3px 5px 3px 5px;
+  }
+  
+  div.method {
+    background-color: #ffffff;
+    border: 1px solid #d0d0d0;
+    margin-bottom: 10px;
+  }
+  
+  div.method h1 {
+    border-bottom: 1px dotted #d0d0d0;
+    background-color: #f6f6f6;
+    color: #505050;
+    font-weight: bold;
+    font-size: 9pt;
+    margin: 0px;
+    padding: 3px 5px 3px 5px;
+  }
+
+  div.content {
+    padding: 10px;
+  }
+
+  div.description {
+    padding: 0px 0px 15px 0px;
+  }
+  
+  div.example {
+    font-family: monospace;
+  }
+  
+</style>
+
+<div id="breadcrumbs">
+  <a href="/webadmin/">Home</a>
+  &raquo;
+  <a href="rest.html">REST-Services</a>
+</div>
+
+<h2>REST-Services</h2>
+
+#set($list = $restdoc.list)
+#if($list.length() > 0)
+  #set($size = $list.length() - 1)
+  #foreach($i in [0..$size])
+    #set($line = $list.get($i))
+    <div class="service">
+      <h1>$line.name</h1>
+  
+      <div class="content">
+        #if($line.description != '')
+          <div class="description">$line.description</div>
+        #end
+  
+        #foreach($method in $line.methods)
+          <div class="method">
+            <h1>$method.path</h1>
+            
+            <div class="content">
+              #if($method.description != '')
+                <div class="description">$method.description</div>
+              #end
+  
+              #if($method.example != '')
+                <div class="example">
+                  Beispiel: <a href="/webadmin/rest/$method.example">/webadmin/rest/$method.example</a>
+                </div>
+              #end
+            </div>
+          </div>
+        #end
+      </div>
+    </div>
+  #end
+#end
+
+#parse("includes/footer.vm")

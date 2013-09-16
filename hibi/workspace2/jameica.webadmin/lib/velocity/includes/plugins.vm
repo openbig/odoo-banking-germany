@@ -1,0 +1,20 @@
+<h2>Installierte Plugins</h2>
+<table class="data">
+  <tr>
+    <th>Name</th>
+    <th>Version</th>
+    <th>Beschreibung</th>
+  </tr>
+  #set($list = $plugin.list)
+  #if($list.length() > 0)
+    #set($size = $list.length() - 1)
+    #foreach($i in [0..$size])
+      #set($line = $list.get($i))
+      <tr onmouseover="change_to(this);" onmouseout="change_back(this);">
+        <td><a title="Klicken für Details" href="plugin.html?plugin=$line.name">$line.name</a></td>
+        <td>$line.version #if($line.buildnumber != '')[Build $line.buildnumber]#end</td>
+        <td>$line.description</td>
+      </tr>
+    #end
+  #end
+</table>

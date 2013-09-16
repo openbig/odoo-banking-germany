@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rules xmlns:wt="http://www.willuhn.de/schema/jameica-sensors-rule"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.willuhn.de/schema/jameica-sensors-rule http://www.willuhn.de/schema/jameica-sensors-rule-1.0.xsd ">
+
+
+  <!-- Warmwasser Normbereich -->
+  <rule>
+    <sensor>waterkotte.ai1.wpcu.device.temp.water.real</sensor>
+    <limit>30.0:50.0</limit>
+    <operator>de.willuhn.jameica.sensors.notify.operator.Outside</operator>
+
+    <notifier>de.willuhn.jameica.sensors.notify.notifier.Mail</notifier>
+    <params>
+      <param name="mail.sender" value="info@willuhn.de" />
+      <param name="mail.recipients" value="info@willuhn.de" />
+    </params>
+  </rule>
+  
+</rules>

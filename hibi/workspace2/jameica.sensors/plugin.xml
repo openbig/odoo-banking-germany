@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<plugin name="jameica.sensors" version="2.5.0" class="de.willuhn.jameica.sensors.Plugin"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="http://www.willuhn.de/schema/jameica-plugin-1.0.xsd">
+
+
+  <description>Jameica sensor framework</description>
+  <url>https://www.willuhn.de/products/jameica/releases/nightly/jameica.sensors-2.5.0-nightly.zip</url>
+  <homepage>http://www.willuhn.de/products/jameica/extensions.php#jameica.sensors</homepage>
+  <license>GPL - http://www.gnu.org/copyleft/gpl.html</license>
+
+  <requires jameica="2.3.0+">
+    <import plugin="jameica.webadmin"  version="2.3.0+" required="true" />
+  </requires>
+
+  <classfinder>
+    <include>jameica\.sensors\.jar</include>
+    <include>.*\.class</include>
+  </classfinder>
+
+  <services>
+    <service name="scheduler"   autostart="true" depends=""          class="de.willuhn.jameica.sensors.service.Scheduler" />
+    <service name="archive"     autostart="true" depends="scheduler" class="de.willuhn.jameica.sensors.service.Archive" />
+    <service name="rrd"         autostart="true" depends="scheduler" class="de.willuhn.jameica.sensors.service.RRD" />
+    <service name="notify"      autostart="true" depends="scheduler" class="de.willuhn.jameica.sensors.service.Notify" />
+  </services>
+</plugin>
+

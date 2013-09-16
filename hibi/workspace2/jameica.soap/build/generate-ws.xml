@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+ $Revision: 1.4 $
+ $Date: 2009/05/29 16:23:59 $
+ $Author: willuhn $
+ 
+ Copyright (c) by willuhn software & services
+ All rights reserved
+ 
+ Beispiel fuer ein Ant-Script zum Erzeugen der Java-Klassen anhand der WSDL-URL
+ des Echo-Services. Der Source wird im Package "testclient" abgelegt.
+ Damit das Ant-Script funktioniert, muss der Jameica-Server mit den
+ Plugins "jameica.webadmin" und "jameica.soap" bereits auf localhost
+ laufen, da sonst das Herunterladen der WSDL-Datei von der in "$wsdl.url"
+ angegebenen URL fehlschlaegt.
+ Ein Beispiel-Aufruf des Services koennte dann so aussehen:
+ 
+ testclient.EchoService echo = new testclient.EchoService();
+ testclient.Echo e = echo.getEchoPort();
+ System.out.println(e.echo("Hallo Welt"));
+ 
+ Eigene Services koennen einfach publiziert werden, indem man eine
+ QueryMessage mit Name und Instanz des Services an den die Queue
+ "jameica.soap.publish" sendet. Etwa so:
+ 
+ Application.getMessagingFactory().getMessagingQueue("jameica.soap.publish").sendMessage(new QueryMessage("echo", new Echo()));
+ 
+-->
+
+<project basedir=".." default="all" name="All">
+  <target name="init">
+
+    <!-- URL der WSDL-Datei. Per Default wird HTTPS verwendet, was
+         beim Aufruf von wsdl2java jedoch zu einem Fehler fuehrt. Daher
+         hier ohne SSL. Das laesst dich in .jameica/cfg/de.willuhn.jameica.webadmin.Plugin.properties
+         durch die folgenden beiden Parameter bewerkstelligen:
+         
+         listener.http.ssl=false
+         listener.http.auth=false
+    //-->
+    <property name="wsdl.url" value="http://localhost:8080/soap/message?wsdl" />
+    
+    <!-- Name des zu verwendenden Java-Packages fuer die zu erzeugenden Klassen //-->
+    <property name="wsdl.package" value="testclient" />
+
+    <!-- Verzeichnis, in dem die erzeugten Klassen abgelegt werden soll //-->
+    <property name="wsdl.src-dir" value="src" />
+    
+    <!-- Ab hier muss nichts mehr geaendert werden //-->
+    <property environment="env" />
+    
+    <path id="compilepath">
+      <pathelement path="lib/cxf-manifest.jar" />
+      <fileset dir="../jameica">
+        <include name="lib/**/*.jar" />
+      </fileset>
+    </path>
+
+  </target>
+
+  <target depends="init" name="generate">
+    <java classname="org.apache.cxf.tools.wsdlto.WSDLToJava" classpathref="compilepath" failonerror="true" fork="true" dir=".">
+      <arg line="-p ${wsdl.package} -d ${wsdl.src-dir} -client -verbose -autoNameResolution ${wsdl.url}" />
+    </java>
+  </target>
+
+  <target depends="generate" name="all" />
+</project>

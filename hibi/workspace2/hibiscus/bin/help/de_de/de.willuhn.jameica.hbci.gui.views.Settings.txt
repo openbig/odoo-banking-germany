@@ -1,0 +1,35 @@
+<form>
+	<p>
+		<span color="header" font="header">Einstellungen</span>
+	</p>
+
+	<li>
+		Wenn Sie über eine dauerhafte Internetverbindung verfügen,
+		können Sie die Option <b>Dauerhafte Internetverbindung, Aufforderung zum Verbinden nicht erforderlich</b> aktivieren.
+	</li>
+	
+	<li>
+	  Deaktivieren Sie die Option <b>HBCI-Synchronisierung bei Fehler abbrechen</b>, wenn die
+		Synchronisierung auch dann fortgesetzt werden soll, wenn bei einem der auszuführenden
+		Aufträge ein Fehler auftrat. (nicht empfohlen, da hierbei ggf. aufgetretene Fehlermeldungen
+		nicht angezeigt werden).
+  </li>
+
+	<li>
+	  Deaktivieren Sie die Option <b>Kontonummern und Bankleitzahlen mittels Prüfsumme testen</b>,
+	  wenn Sie nicht wünschen, dass Hibiscus die von Ihnen eingegebenen Kontonummern
+	  auf Plausibilität prüfen soll.
+	</li>
+
+	<li>
+		Sie können ein Limit für den Maximalbetrag eines Auftrages definieren um zu verhindern,
+    dass Sie versehentlich einen zu großen Betrag eingeben.
+	</li>
+
+	<li>
+		<b>Umsatz-Kategorien:</b> Sie können auch mehrere Suchbegriffe (durch Komma getrennt)
+		eingeben. Umsätze werden dann bereits dieser Kategorie zugeordnet, wenn nur
+		einer der angegebenen Suchbegriffe gefunden wurde.
+	</li>
+	
+</form>

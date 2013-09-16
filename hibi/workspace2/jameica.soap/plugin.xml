@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<plugin name="jameica.soap" version="2.5.0" class="de.willuhn.jameica.soap.Plugin"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="http://www.willuhn.de/schema/jameica-plugin-1.0.xsd">
+
+
+  <description>SOAP-Konnektor für Jameica</description>
+  <url>https://www.willuhn.de/products/jameica/releases/nightly/jameica.soap-2.5.0-nightly.zip</url>
+  <homepage>http://www.willuhn.de/products/jameica/extensions.php#jameica.soap</homepage>
+  <license>GPL - http://www.gnu.org/copyleft/gpl.html</license>
+
+  <requires jameica="2.3+">
+    <import plugin="jameica.webadmin" version="2.3+"/>
+  </requires>
+
+  <classfinder>
+    <include>jameica\.soap\.jar</include>
+    <include>.*\.class</include>
+  </classfinder>
+  
+  <services>
+    <service name="publish" class="de.willuhn.jameica.soap.services.PublishService" autostart="true"/>
+  </services>
+</plugin>
+

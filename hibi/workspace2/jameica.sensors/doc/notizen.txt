@@ -1,0 +1,21 @@
+Notizen.
+
+* Jameica muss mit dem JVM-Parameter
+  -Djava.library.path=$JAMEICA_HOME/plugins/jameica.waterkotte/lib/rxtx
+  gestartet werden, damit der JNDI-Treiber gefunden wird
+
+* im Install-Verzeichnis der Waterkotte-Software 1.3.7 befindet
+  sich im Verzeichnis "modbus" eine Datei "app.xml",
+  die scheinbar eine Aufschluesselung aller Parameter
+  samt Typ, Laenge, Min, Max, Bezeichnung und Offset enthaelt.
+
+* ein Qt-Client fuer modbus
+  http://qmodbus.sourceforge.net/
+
+* Java-Implementierung fuer modbus
+  http://jamod.sourceforge.net/
+
+* Jamod mit rxtx statt javax.comm neu uebersetzt. javax.comm suckt
+
+* Als Encoding muss "rtu" verwendet werden - nicht wie in der
+  jamod-Doku beschrieben: "ascii"

@@ -1,0 +1,10 @@
+<info>
+  <name>JavaBeans Activation Framework</name>
+  <description>
+    standard extension to the Java platform that lets you take advantage of standard services to:
+    determine the type of an arbitrary piece of data; encapsulate access to it; discover the
+    operations available on it; and instantiate the appropriate bean to perform the operation(s)
+  </description>
+  <url>http://java.sun.com/javase/technologies/desktop/javabeans/jaf/</url>
+  <license>see attached LICENSE.txt</license>
+</info>

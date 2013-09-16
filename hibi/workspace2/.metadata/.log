@@ -1,0 +1,463 @@
+!SESSION 2013-09-03 12:42:43.545 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pl_PL
+Command-line arguments:  -data /home/tkarpinski/Dokumenty/java/workspace2 -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 2 2013-09-03 12:50:04.484
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2013-09-03 12:50:04.484
+!MESSAGE The project description file (.project) for 'hibiscus.server' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.ui 4 4 2013-09-03 12:51:01.051
+!MESSAGE Invalid preference page path: XML Syntax
+
+!ENTRY org.eclipse.jdt.ui 4 2 2013-09-03 15:01:08.674
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.util.regex.PatternSyntaxException: Dangling meta character '+' near index 0
++""
+^
+	at java.util.regex.Pattern.error(Pattern.java:1924)
+	at java.util.regex.Pattern.sequence(Pattern.java:2090)
+	at java.util.regex.Pattern.expr(Pattern.java:1964)
+	at java.util.regex.Pattern.compile(Pattern.java:1665)
+	at java.util.regex.Pattern.<init>(Pattern.java:1337)
+	at java.util.regex.Pattern.compile(Pattern.java:1047)
+	at org.eclipse.jdt.internal.debug.ui.search.LaunchConfigurationQueryParticipant.search(LaunchConfigurationQueryParticipant.java:127)
+	at org.eclipse.jdt.internal.ui.search.JavaSearchQuery$2.run(JavaSearchQuery.java:164)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.search.JavaSearchQuery.run(JavaSearchQuery.java:170)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2013-09-03 15:01:08.676
+!MESSAGE An error occurred during participant search. The participant has been disabled for the current session.
+!STACK 0
+java.util.regex.PatternSyntaxException: Dangling meta character '+' near index 0
++""
+^
+	at java.util.regex.Pattern.error(Pattern.java:1924)
+	at java.util.regex.Pattern.sequence(Pattern.java:2090)
+	at java.util.regex.Pattern.expr(Pattern.java:1964)
+	at java.util.regex.Pattern.compile(Pattern.java:1665)
+	at java.util.regex.Pattern.<init>(Pattern.java:1337)
+	at java.util.regex.Pattern.compile(Pattern.java:1047)
+	at org.eclipse.jdt.internal.debug.ui.search.LaunchConfigurationQueryParticipant.search(LaunchConfigurationQueryParticipant.java:127)
+	at org.eclipse.jdt.internal.ui.search.JavaSearchQuery$2.run(JavaSearchQuery.java:164)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.search.JavaSearchQuery.run(JavaSearchQuery.java:170)
+	at org.eclipse.search2.internal.ui.InternalSearchUI$InternalSearchJob.run(InternalSearchUI.java:91)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2013-09-03 16:03:47.039 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2013-09-03 17:26:59.122
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2013-09-04 12:53:51.693 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2013-09-04 14:15:08.616
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2013-09-04 14:57:56.418 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2013-09-04 15:07:51.819
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2013-09-05 14:52:01.158 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-09-05 14:52:10.505
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 4 2013-09-05 15:00:34.701
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2013-09-11 11:51:47.875 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-09-11 11:52:14.993
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui.browser 2 0 2013-09-11 11:52:34.011
+!MESSAGE Internal browser is not available: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+
+!ENTRY org.eclipse.ui.ide 4 3 2013-09-11 12:04:31.939
+!MESSAGE Cannot complete operation because resources no longer exist.
+
+!ENTRY org.eclipse.wst.javascript.ui 4 4 2013-09-11 13:14:27.001
+!MESSAGE No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+!STACK 0
+org.eclipse.swt.SWTError: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+	at org.eclipse.swt.SWT.error(SWT.java:3589)
+	at org.eclipse.swt.browser.Mozilla.create(Mozilla.java:291)
+	at org.eclipse.swt.browser.Browser.<init>(Browser.java:109)
+	at org.eclipse.wst.javascript.ui.internal.editor.JSPreviewPage.<init>(JSPreviewPage.java:36)
+	at org.eclipse.wst.javascript.ui.internal.editor.JSMultiPageEditorPart.createPreviewPage(JSMultiPageEditorPart.java:270)
+	at org.eclipse.wst.javascript.ui.internal.editor.JSMultiPageEditorPart.createPages(JSMultiPageEditorPart.java:252)
+	at org.eclipse.ui.part.MultiPageEditorPart.createPartControl(MultiPageEditorPart.java:283)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:661)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:426)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:592)
+	at org.eclipse.ui.internal.EditorReference.getEditor(EditorReference.java:263)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditorBatched(WorkbenchPage.java:2739)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:2651)
+	at org.eclipse.ui.internal.WorkbenchPage.access$13(WorkbenchPage.java:2643)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:2595)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2590)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2574)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2565)
+	at org.eclipse.search.internal.ui.text.EditorOpener.showInEditor(EditorOpener.java:93)
+	at org.eclipse.search.internal.ui.text.EditorOpener.showWithReuse(EditorOpener.java:49)
+	at org.eclipse.search.internal.ui.text.EditorOpener.open(EditorOpener.java:39)
+	at org.eclipse.search.internal.ui.text.FileSearchPage.showMatch(FileSearchPage.java:166)
+	at org.eclipse.search.ui.text.AbstractTextSearchViewPage$7.run(AbstractTextSearchViewPage.java:852)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.search.ui.text.AbstractTextSearchViewPage.showMatch(AbstractTextSearchViewPage.java:855)
+	at org.eclipse.search.ui.text.AbstractTextSearchViewPage.showCurrentMatch(AbstractTextSearchViewPage.java:920)
+	at org.eclipse.search.ui.text.AbstractTextSearchViewPage.gotoNextMatch(AbstractTextSearchViewPage.java:885)
+	at org.eclipse.search.ui.text.AbstractTextSearchViewPage.handleOpen(AbstractTextSearchViewPage.java:1340)
+	at org.eclipse.search.ui.text.AbstractTextSearchViewPage$5.open(AbstractTextSearchViewPage.java:674)
+	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:820)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:857)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:46)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:199)
+	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:818)
+	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1079)
+	at org.eclipse.jface.viewers.StructuredViewer$6.handleOpen(StructuredViewer.java:1183)
+	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:263)
+	at org.eclipse.jface.util.OpenStrategy.access$2(OpenStrategy.java:257)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:297)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1101)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3319)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2971)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2389)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2353)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:106)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1148)
+
+!ENTRY org.eclipse.wst.javascript.ui 4 4 2013-09-11 13:16:14.512
+!MESSAGE No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+!STACK 0
+org.eclipse.swt.SWTError: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+	at org.eclipse.swt.SWT.error(SWT.java:3589)
+	at org.eclipse.swt.browser.Mozilla.create(Mozilla.java:291)
+	at org.eclipse.swt.browser.Browser.<init>(Browser.java:109)
+	at org.eclipse.wst.javascript.ui.internal.editor.JSPreviewPage.<init>(JSPreviewPage.java:36)
+	at org.eclipse.wst.javascript.ui.internal.editor.JSMultiPageEditorPart.createPreviewPage(JSMultiPageEditorPart.java:270)
+	at org.eclipse.wst.javascript.ui.internal.editor.JSMultiPageEditorPart.createPages(JSMultiPageEditorPart.java:252)
+	at org.eclipse.ui.part.MultiPageEditorPart.createPartControl(MultiPageEditorPart.java:283)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:661)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:426)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:592)
+	at org.eclipse.ui.internal.EditorReference.getEditor(EditorReference.java:263)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditorBatched(WorkbenchPage.java:2739)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:2651)
+	at org.eclipse.ui.internal.WorkbenchPage.access$13(WorkbenchPage.java:2643)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:2595)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2590)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2574)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2565)
+	at org.eclipse.search.internal.ui.text.EditorOpener.showInEditor(EditorOpener.java:93)
+	at org.eclipse.search.internal.ui.text.EditorOpener.showWithReuse(EditorOpener.java:49)
+	at org.eclipse.search.internal.ui.text.EditorOpener.open(EditorOpener.java:39)
+	at org.eclipse.search.internal.ui.text.FileSearchPage.showMatch(FileSearchPage.java:166)
+	at org.eclipse.search.ui.text.AbstractTextSearchViewPage$7.run(AbstractTextSearchViewPage.java:852)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.search.ui.text.AbstractTextSearchViewPage.showMatch(AbstractTextSearchViewPage.java:855)
+	at org.eclipse.search.ui.text.AbstractTextSearchViewPage.showCurrentMatch(AbstractTextSearchViewPage.java:920)
+	at org.eclipse.search.ui.text.AbstractTextSearchViewPage.gotoNextMatch(AbstractTextSearchViewPage.java:885)
+	at org.eclipse.search.ui.text.AbstractTextSearchViewPage.handleOpen(AbstractTextSearchViewPage.java:1340)
+	at org.eclipse.search.ui.text.AbstractTextSearchViewPage$5.open(AbstractTextSearchViewPage.java:674)
+	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:820)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:857)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:46)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:199)
+	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:818)
+	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1079)
+	at org.eclipse.jface.viewers.StructuredViewer$6.handleOpen(StructuredViewer.java:1183)
+	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:263)
+	at org.eclipse.jface.util.OpenStrategy.access$2(OpenStrategy.java:257)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:297)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1101)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3319)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2971)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2389)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2353)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:106)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1148)
+
+!ENTRY org.eclipse.wst.javascript.ui 4 4 2013-09-11 14:04:56.237
+!MESSAGE No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+!STACK 0
+org.eclipse.swt.SWTError: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+	at org.eclipse.swt.SWT.error(SWT.java:3589)
+	at org.eclipse.swt.browser.Mozilla.create(Mozilla.java:291)
+	at org.eclipse.swt.browser.Browser.<init>(Browser.java:109)
+	at org.eclipse.wst.javascript.ui.internal.editor.JSPreviewPage.<init>(JSPreviewPage.java:36)
+	at org.eclipse.wst.javascript.ui.internal.editor.JSMultiPageEditorPart.createPreviewPage(JSMultiPageEditorPart.java:270)
+	at org.eclipse.wst.javascript.ui.internal.editor.JSMultiPageEditorPart.createPages(JSMultiPageEditorPart.java:252)
+	at org.eclipse.ui.part.MultiPageEditorPart.createPartControl(MultiPageEditorPart.java:283)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:661)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:426)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:592)
+	at org.eclipse.ui.internal.EditorReference.getEditor(EditorReference.java:263)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditorBatched(WorkbenchPage.java:2739)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:2651)
+	at org.eclipse.ui.internal.WorkbenchPage.access$13(WorkbenchPage.java:2643)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:2595)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2590)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2574)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2565)
+	at org.eclipse.search.internal.ui.text.EditorOpener.showInEditor(EditorOpener.java:93)
+	at org.eclipse.search.internal.ui.text.EditorOpener.showWithReuse(EditorOpener.java:49)
+	at org.eclipse.search.internal.ui.text.EditorOpener.open(EditorOpener.java:39)
+	at org.eclipse.search.internal.ui.text.FileSearchPage.showMatch(FileSearchPage.java:166)
+	at org.eclipse.search.ui.text.AbstractTextSearchViewPage$7.run(AbstractTextSearchViewPage.java:852)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.search.ui.text.AbstractTextSearchViewPage.showMatch(AbstractTextSearchViewPage.java:855)
+	at org.eclipse.search.ui.text.AbstractTextSearchViewPage.showCurrentMatch(AbstractTextSearchViewPage.java:920)
+	at org.eclipse.search.ui.text.AbstractTextSearchViewPage.gotoNextMatch(AbstractTextSearchViewPage.java:885)
+	at org.eclipse.search.ui.text.AbstractTextSearchViewPage.handleOpen(AbstractTextSearchViewPage.java:1340)
+	at org.eclipse.search.ui.text.AbstractTextSearchViewPage$5.open(AbstractTextSearchViewPage.java:674)
+	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:820)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:857)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:46)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:199)
+	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:818)
+	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1079)
+	at org.eclipse.jface.viewers.StructuredViewer$6.handleOpen(StructuredViewer.java:1183)
+	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:263)
+	at org.eclipse.jface.util.OpenStrategy.access$2(OpenStrategy.java:257)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:297)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1101)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3319)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2971)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2389)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2353)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:106)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1148)
+
+!ENTRY org.eclipse.ui 4 0 2013-09-11 14:06:32.336
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:3563)
+	at org.eclipse.swt.SWT.error(SWT.java:3481)
+	at org.eclipse.swt.SWT.error(SWT.java:3452)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:438)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:376)
+	at org.eclipse.swt.widgets.List.setItems(List.java:1323)
+	at org.eclipse.mylyn.internal.bugzilla.ui.search.BugzillaSearchPage.updateAttributesFromRepository(BugzillaSearchPage.java:1387)
+	at org.eclipse.mylyn.internal.bugzilla.ui.search.BugzillaSearchPage.setVisible(BugzillaSearchPage.java:984)
+	at org.eclipse.mylyn.internal.tasks.ui.TaskSearchPage.displayQueryPage(TaskSearchPage.java:308)
+	at org.eclipse.mylyn.internal.tasks.ui.TaskSearchPage.setVisible(TaskSearchPage.java:370)
+	at org.eclipse.search.internal.ui.SearchDialog.turnToPage(SearchDialog.java:520)
+	at org.eclipse.search.internal.ui.SearchDialog.access$1(SearchDialog.java:494)
+	at org.eclipse.search.internal.ui.SearchDialog$7.widgetSelected(SearchDialog.java:402)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:227)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1101)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3319)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2971)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:820)
+	at org.eclipse.jface.window.Window.open(Window.java:796)
+	at org.eclipse.search.internal.ui.OpenSearchDialogAction.run(OpenSearchDialogAction.java:54)
+	at org.eclipse.search.internal.ui.OpenSearchDialogAction.run(OpenSearchDialogAction.java:45)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:256)
+	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:229)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:546)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:490)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:402)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1101)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3319)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2971)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2389)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2353)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:106)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1148)
+!SESSION 2013-09-11 14:22:16.481 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2013-09-11 14:36:44.544
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2013-09-11 14:36:53.949 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui.browser 2 0 2013-09-11 14:37:05.670
+!MESSAGE Internal browser is not available: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+!SESSION 2013-09-11 14:44:00.541 -----------------------------------------------
+eclipse.buildId=M20080221-1800
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui.browser 2 0 2013-09-11 14:45:03.358
+!MESSAGE Internal browser is not available: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+!SESSION 2013-09-11 14:53:50.549 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2013-09-11 15:57:54.839
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2013-09-13 11:02:24.385 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2013-09-13 11:21:21.738
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2013-09-13 14:54:05.489 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2013-09-13 14:58:47.617
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2013-09-13 14:59:34.297 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui 4 4 2013-09-13 15:00:00.599
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2013-09-13 15:22:55.631 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-09-13 15:22:57.166
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 4 2013-09-13 15:27:32.019
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2013-09-16 13:03:57.771 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.7.0_03
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pl_PL
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-09-16 13:04:05.344
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 4 2013-09-16 13:35:52.636
+!MESSAGE Invalid preference page path: XML Syntax

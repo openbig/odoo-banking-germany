@@ -1,0 +1,95 @@
+#parse("includes/header.vm")
+#set($manifest = $plugin.getDetails($request.getParameter("plugin")))
+
+<div id="breadcrumbs">
+  <a href="/webadmin/">Home</a>
+  &raquo;
+  <a href="plugin.html?plugin=$manifest.name">Plugin $manifest.name</a>
+</div>
+
+<form method="post" name="form1">
+  <input type="hidden" name="action" value="">
+  <input type="hidden" name="service" value="">
+</form>
+
+<script type="text/javascript">
+  
+  function doStop(v)
+  {
+    if (!window.confirm("Service wirklich stoppen?"))
+      return;
+
+    document.form1.elements.action.value = "stop";
+    document.form1.elements.service.value = v;
+    document.form1.submit();
+  }
+
+  function doStart(v)
+  {
+    document.form1.elements.action.value = "start";
+    document.form1.elements.service.value = v;
+    document.form1.submit();
+  }
+  
+</script>
+
+<h2>Plugin $manifest.name</h2>
+
+<h3>Kenndaten</h3>
+
+<table class="data">
+  <tr>
+    <td>Beschreibung</td>
+    <td>$manifest.description</td>
+  </tr>
+  <tr>
+    <td>Version</td>
+    <td>$manifest.version [Build $manifest.buildnumber]</td>
+  </tr>
+  <tr>
+    <td>Verzeichnis</td>
+    <td>$manifest.plugindir</td>
+  </tr>
+</table>
+
+<h3>Services</h3>
+
+<table class="data">
+  <tr>
+    <th>Identifier</th>
+    <th>Name</th>
+    <th>Klasse</th>
+    <th>Abhängigkeiten</th>
+    <th>Status</th>
+    <th>Aktion</th>
+  </tr>
+  
+  #set($list = $service.getList($manifest.name))
+  #if($list.length() > 0)
+    #set($size = $list.length() - 1)
+    #foreach($i in [0..$size])
+      #set($line = $list.get($i))
+      <tr onmouseover="change_to(this);" onmouseout="change_back(this);">
+        <td>$line.name</td>
+        <td>$line.description</td>
+        <td>$line.get("class")</td>
+        <td>
+          #foreach($dep in $line.depends)
+            $dep
+            <br/>
+          #end
+        </td>
+  
+        #if($line.started)
+          <td style="color:#46824A">gestartet</td>
+          <td><a title="Service stoppen" href="javascript:doStop('$line.name')">Stoppen</a>
+        #else
+          <td style="color:#6E1416">NICHT gestartet</td>
+          <td><a title="Service starten" href="javascript:doStart('$line.name')">Starten</a>
+        #end
+      </tr>
+    #end
+  #end
+</table>
+
+#parse("includes/footer.vm")

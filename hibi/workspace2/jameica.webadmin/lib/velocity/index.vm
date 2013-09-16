@@ -1,0 +1,29 @@
+#parse("includes/header.vm")
+
+<div id="breadcrumbs">
+  <a href="/webadmin/">Home</a>
+</div>
+
+<table style="width:100%">
+  <tr>
+    <td style="border-right:1px dotted #909090;padding-right: 20px;width:650px">
+      #parse("includes/status.vm")
+      #parse("includes/plugins.vm")
+      #parse("includes/certs.vm")
+    </td>
+    <td style="padding-left: 20px;width:300px">
+
+      #parse("includes/messages.vm")
+
+      #parse("includes/server.vm")
+
+      #parse("includes/tasks.vm")
+    </td>
+  </tr>
+</table>
+
+<div style="margin-top:20px">
+  #parse("includes/log.vm")
+</div>
+
+#parse("includes/footer.vm")
