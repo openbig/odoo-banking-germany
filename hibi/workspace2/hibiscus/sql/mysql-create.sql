@@ -181,8 +181,93 @@ CREATE TABLE aueberweisung (
      , betrag DOUBLE NOT NULL
      , zweck VARCHAR(140)
      , termin DATE NOT NULL
+     , banktermin int(10)
+     , umbuchung int(1)
      , ausgefuehrt int(10) NOT NULL
      , ausgefuehrt_am DATETIME
+     , endtoendid VARCHAR(35)
+     , pmtinfid VARCHAR(35)
+     , UNIQUE (id)
+     , PRIMARY KEY (id)
+) ENGINE=InnoDB;
+
+CREATE TABLE sepalastschrift (
+       id int(10) AUTO_INCREMENT
+     , konto_id int(10) NOT NULL
+     , empfaenger_konto VARCHAR(40) NOT NULL
+     , empfaenger_name VARCHAR(140) NOT NULL
+     , empfaenger_bic VARCHAR(15) NULL
+     , betrag DOUBLE NOT NULL
+     , zweck VARCHAR(140)
+     , termin DATE NOT NULL
+     , ausgefuehrt int(10) NOT NULL
+     , ausgefuehrt_am DATETIME
+     , endtoendid VARCHAR(35)
+     , creditorid VARCHAR(35) NOT NULL
+     , mandateid VARCHAR(35) NOT NULL
+     , sigdate DATE NOT NULL
+     , sequencetype VARCHAR(8) NOT NULL
+     , sepatype VARCHAR(8)
+     , targetdate DATE
+     , orderid VARCHAR(255)
+     , pmtinfid VARCHAR(35)
+     , UNIQUE (id)
+     , PRIMARY KEY (id)
+) ENGINE=InnoDB;
+
+CREATE TABLE sepaslast (
+       id int(10) AUTO_INCREMENT
+     , konto_id int(10) NOT NULL
+     , bezeichnung VARCHAR(255) NOT NULL
+     , sequencetype VARCHAR(8) NOT NULL
+     , sepatype VARCHAR(8)
+     , targetdate DATE
+     , termin DATE NOT NULL
+     , ausgefuehrt int(10) NOT NULL
+     , ausgefuehrt_am DATETIME
+     , orderid VARCHAR(255)
+     , pmtinfid VARCHAR(35)
+     , UNIQUE (id)
+     , PRIMARY KEY (id)
+) ENGINE=InnoDB;
+
+CREATE TABLE sepaslastbuchung (
+       id int(10) AUTO_INCREMENT
+     , sepaslast_id int(10) NOT NULL
+     , empfaenger_konto VARCHAR(40) NOT NULL
+     , empfaenger_name VARCHAR(140) NOT NULL
+     , empfaenger_bic VARCHAR(15) NULL
+     , betrag DOUBLE NOT NULL
+     , zweck VARCHAR(140)
+     , endtoendid VARCHAR(35)
+     , creditorid VARCHAR(35) NOT NULL
+     , mandateid VARCHAR(35) NOT NULL
+     , sigdate DATE NOT NULL
+     , UNIQUE (id)
+     , PRIMARY KEY (id)
+) ENGINE=InnoDB;
+
+CREATE TABLE sepasueb (
+       id int(10) AUTO_INCREMENT
+     , konto_id int(10) NOT NULL
+     , bezeichnung VARCHAR(255) NOT NULL
+     , termin DATE NOT NULL
+     , ausgefuehrt int(10) NOT NULL
+     , ausgefuehrt_am DATETIME
+     , pmtinfid VARCHAR(35)
+     , UNIQUE (id)
+     , PRIMARY KEY (id)
+) ENGINE=InnoDB;
+
+CREATE TABLE sepasuebbuchung (
+       id int(10) AUTO_INCREMENT
+     , sepasueb_id int(10) NOT NULL
+     , empfaenger_konto VARCHAR(40) NOT NULL
+     , empfaenger_name VARCHAR(140) NOT NULL
+     , empfaenger_bic VARCHAR(15) NULL
+     , betrag DOUBLE NOT NULL
+     , zweck VARCHAR(140)
+     , endtoendid VARCHAR(35)
      , UNIQUE (id)
      , PRIMARY KEY (id)
 ) ENGINE=InnoDB;
@@ -234,6 +319,28 @@ CREATE TABLE dauerauftrag (
      , PRIMARY KEY (id)
 ) ENGINE=InnoDB;
 
+CREATE TABLE sepadauerauftrag (
+       id int(10) AUTO_INCREMENT
+     , konto_id int(10) NOT NULL
+     , empfaenger_konto VARCHAR(40) NOT NULL
+     , empfaenger_name VARCHAR(140) NOT NULL
+     , empfaenger_bic VARCHAR(15) NULL
+     , betrag DOUBLE NOT NULL
+     , zweck VARCHAR(140)
+     , erste_zahlung DATE NOT NULL
+     , letzte_zahlung DATE
+     , orderid VARCHAR(100)
+     , endtoendid VARCHAR(35)
+     , zeiteinheit int(10) NOT NULL
+     , intervall int(10) NOT NULL
+     , tag int(10) NOT NULL
+     , canchange int(1)
+     , candelete int(1)
+     , pmtinfid VARCHAR(35)
+     , UNIQUE (id)
+     , PRIMARY KEY (id)
+) ENGINE=InnoDB;
+
 CREATE TABLE version (
        id int(10) AUTO_INCREMENT
      , name VARCHAR(255) NOT NULL
@@ -273,6 +380,12 @@ CREATE INDEX idx_umsatz_umsatztyp ON umsatz(umsatztyp_id);
 CREATE INDEX idx_dauerauftrag_konto ON dauerauftrag(konto_id);
 CREATE INDEX idx_aueberweisung_konto ON aueberweisung(konto_id);
 CREATE INDEX idx_reminder_uuid ON reminder(uuid);
+CREATE INDEX idx_sepalast_konto ON sepalastschrift(konto_id);
+CREATE INDEX idx_sepaslast_konto ON sepaslast(konto_id);
+CREATE INDEX idx_sepaslastbuchung_sepaslast ON sepaslastbuchung(sepaslast_id);
+CREATE INDEX idx_sepasueb_konto ON sepasueb(konto_id);
+CREATE INDEX idx_sepasuebbuchung_sepasueb ON sepasuebbuchung(sepasueb_id);
+CREATE INDEX idx_sepadauerauftrag_konto ON sepadauerauftrag(konto_id);
 
 ALTER TABLE lastschrift ADD CONSTRAINT fk_lastschrift_konto FOREIGN KEY (konto_id) REFERENCES konto (id);
 ALTER TABLE sueberweisung ADD CONSTRAINT fk_sueberweisung_konto FOREIGN KEY (konto_id) REFERENCES konto (id);
@@ -286,6 +399,12 @@ ALTER TABLE umsatz ADD CONSTRAINT fk_umsatz_konto FOREIGN KEY (konto_id) REFEREN
 ALTER TABLE umsatz ADD CONSTRAINT fk_umsatz_umsatztyp FOREIGN KEY (umsatztyp_id) REFERENCES umsatztyp (id);
 ALTER TABLE dauerauftrag ADD CONSTRAINT fk_dauerauftrag_konto FOREIGN KEY (konto_id) REFERENCES konto (id);
 ALTER TABLE aueberweisung ADD CONSTRAINT fk_aueberweisung_konto FOREIGN KEY (konto_id) REFERENCES konto (id);
+ALTER TABLE sepalastschrift ADD CONSTRAINT fk_sepalast_konto FOREIGN KEY (konto_id) REFERENCES konto (id);
+ALTER TABLE sepaslast ADD CONSTRAINT fk_sepaslast_konto FOREIGN KEY (konto_id) REFERENCES konto (id);
+ALTER TABLE sepaslastbuchung ADD CONSTRAINT fk_sepaslastbuchung_sepaslast FOREIGN KEY (sepaslast_id) REFERENCES sepaslast (id);
+ALTER TABLE sepasueb ADD CONSTRAINT fk_sepasueb_konto FOREIGN KEY (konto_id) REFERENCES konto (id);
+ALTER TABLE sepasuebbuchung ADD CONSTRAINT fk_sepasuebbuchung_sepasueb FOREIGN KEY (sepasueb_id) REFERENCES sepasueb (id);
+ALTER TABLE sepadauerauftrag ADD CONSTRAINT fk_sepadauerauftrag_konto FOREIGN KEY (konto_id) REFERENCES konto (id);
 
 -- Indizes fuer grosse Datenmengen
 ALTER TABLE umsatz ADD INDEX (datum);
@@ -295,4 +414,4 @@ ALTER TABLE ueberweisung ADD INDEX (termin);
 ALTER TABLE lastschrift ADD INDEX (termin);
 
 
-INSERT INTO version (name,version) values ('db',42);
+INSERT INTO version (name,version) values ('db',55);

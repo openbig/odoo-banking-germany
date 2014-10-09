@@ -1,5 +1,0 @@
-WORKDIR=~/.jameica
-PASSWORD=jameica
-PIDFILE=$WORKDIR/jameica.pid
-LOCKFILE=$WORKDIR/jameica.lock
-

@@ -1,6 +1,0 @@
-<info>
-  <name>BouncyCastle</name>
-  <description>An implemenation of the Java Crypto API (JCA)</description>
-  <url>http://www.bouncycastle.org/</url>
-  <license>http://www.bouncycastle.org/licence.html</license>
-</info>

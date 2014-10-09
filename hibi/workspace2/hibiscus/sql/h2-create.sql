@@ -63,8 +63,93 @@ CREATE TABLE aueberweisung (
   betrag double NOT NULL,
   zweck varchar(140),
   termin date NOT NULL,
+  banktermin int(1) NULL,
+  umbuchung int(1) NULL,
   ausgefuehrt int(1) NOT NULL,
   ausgefuehrt_am datetime NULL,
+  endtoendid varchar(35),
+  pmtinfid varchar(35),
+  UNIQUE (id),
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE sepalastschrift (
+  id IDENTITY(1),
+  konto_id int(4) NOT NULL,
+  empfaenger_konto varchar(40) NOT NULL,
+  empfaenger_name varchar(140) NOT NULL,
+  empfaenger_bic varchar(15) NULL,
+  betrag double NOT NULL,
+  zweck varchar(140),
+  termin date NOT NULL,
+  ausgefuehrt int(1) NOT NULL,
+  ausgefuehrt_am datetime NULL,
+  endtoendid varchar(35),
+  creditorid varchar(35) NOT NULL,
+  mandateid varchar(35) NOT NULL,
+  sigdate date NOT NULL,
+  sequencetype varchar(8) NOT NULL,
+  sepatype varchar(8) NULL,
+  targetdate date NULL,
+  orderid varchar(255) NULL,
+  pmtinfid varchar(35),
+  UNIQUE (id),
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE sepaslast (
+  id IDENTITY(1),
+  konto_id int(4) NOT NULL,
+  bezeichnung varchar(255) NOT NULL,
+  sequencetype varchar(8) NOT NULL,
+  sepatype varchar(8) NULL,
+  targetdate date NULL,
+  termin date NOT NULL,
+  ausgefuehrt int(1) NOT NULL,
+  ausgefuehrt_am datetime NULL,
+  orderid varchar(255) NULL,
+  pmtinfid varchar(35),
+  UNIQUE (id),
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE sepaslastbuchung (
+  id IDENTITY(1),
+  sepaslast_id int(4) NOT NULL,
+  empfaenger_konto varchar(40) NOT NULL,
+  empfaenger_name varchar(140) NOT NULL,
+  empfaenger_bic varchar(15) NULL,
+  betrag double NOT NULL,
+  zweck varchar(140),
+  endtoendid varchar(35),
+  creditorid varchar(35) NOT NULL,
+  mandateid varchar(35) NOT NULL,
+  sigdate date NOT NULL,
+  UNIQUE (id),
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE sepasueb (
+  id IDENTITY(1),
+  konto_id int(4) NOT NULL,
+  bezeichnung varchar(255) NOT NULL,
+  termin date NOT NULL,
+  ausgefuehrt int(1) NOT NULL,
+  ausgefuehrt_am datetime NULL,
+  pmtinfid varchar(35),
+  UNIQUE (id),
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE sepasuebbuchung (
+  id IDENTITY(1),
+  sepasueb_id int(4) NOT NULL,
+  empfaenger_konto varchar(40) NOT NULL,
+  empfaenger_name varchar(140) NOT NULL,
+  empfaenger_bic varchar(15) NULL,
+  betrag double NOT NULL,
+  zweck varchar(140),
+  endtoendid varchar(35),
   UNIQUE (id),
   PRIMARY KEY (id)
 );
@@ -136,6 +221,28 @@ CREATE TABLE dauerauftrag (
   intervall int(2) NOT NULL,
   tag int(2) NOT NULL,
   typ varchar(2) NULL,
+  UNIQUE (id),
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE sepadauerauftrag (
+  id IDENTITY(1),
+  konto_id int(4) NOT NULL,
+  empfaenger_konto varchar(40) NOT NULL,
+  empfaenger_name varchar(140) NOT NULL,
+  empfaenger_bic varchar(15) NULL,
+  betrag double NOT NULL,
+  zweck varchar(140),
+  erste_zahlung date NOT NULL,
+  letzte_zahlung date,
+  orderid varchar(100),
+  endtoendid varchar(35),
+  zeiteinheit int(1) NOT NULL,
+  intervall int(2) NOT NULL,
+  tag int(2) NOT NULL,
+  canchange int(1) NULL,
+  candelete int(1) NULL,
+  pmtinfid varchar(35),
   UNIQUE (id),
   PRIMARY KEY (id)
 );
@@ -271,6 +378,12 @@ ALTER TABLE slastbuchung ADD CONSTRAINT fk_slastschrift1 FOREIGN KEY (slastschri
 ALTER TABLE sueberweisung ADD CONSTRAINT fk_konto7 FOREIGN KEY (konto_id) REFERENCES konto (id) DEFERRABLE;
 ALTER TABLE sueberweisungbuchung ADD CONSTRAINT fk_sueberweisung1 FOREIGN KEY (sueberweisung_id) REFERENCES sueberweisung (id) DEFERRABLE;
 ALTER TABLE aueberweisung ADD CONSTRAINT fk_konto8 FOREIGN KEY (konto_id) REFERENCES konto (id) DEFERRABLE;
+ALTER TABLE sepalastschrift ADD CONSTRAINT fk_konto9 FOREIGN KEY (konto_id) REFERENCES konto (id) DEFERRABLE;
+ALTER TABLE sepaslast ADD CONSTRAINT fk_konto10 FOREIGN KEY (konto_id) REFERENCES konto (id) DEFERRABLE;
+ALTER TABLE sepaslastbuchung ADD CONSTRAINT fk_sepaslast1 FOREIGN KEY (sepaslast_id) REFERENCES sepaslast (id) DEFERRABLE;
+ALTER TABLE sepasueb ADD CONSTRAINT fk_konto11 FOREIGN KEY (konto_id) REFERENCES konto (id) DEFERRABLE;
+ALTER TABLE sepasuebbuchung ADD CONSTRAINT fk_sepasueb1 FOREIGN KEY (sepasueb_id) REFERENCES sepasueb (id) DEFERRABLE;
+ALTER TABLE sepadauerauftrag ADD CONSTRAINT fk_konto12 FOREIGN KEY (konto_id) REFERENCES konto (id) DEFERRABLE;
 
 -- Bevor wir Daten speichern koennen, muessen wir ein COMMIT machen
 COMMIT;
@@ -293,6 +406,6 @@ INSERT INTO turnus (zeiteinheit,intervall,tag,initial)
 INSERT INTO turnus (zeiteinheit,intervall,tag,initial)
   VALUES (1,1,1,1);
   
-INSERT INTO version (name,version) values ('db',42);
+INSERT INTO version (name,version) values ('db',55);
   
 COMMIT;

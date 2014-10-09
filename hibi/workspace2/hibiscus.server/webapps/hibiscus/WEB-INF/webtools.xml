@@ -17,7 +17,6 @@
   <!-- Die konkreten Pages -->
   <pages>
     <page pattern="^/settings.html"         template="settings.vm"         controller="de.willuhn.jameica.hbci.payment.web.beans.Settings"/>
-    <page pattern="^/importieren.html"      template="importieren.vm"      controller="de.willuhn.jameica.hbci.payment.web.beans.Importieren" action="store"/>
     <page pattern="^/passports.html"        template="passports.vm"        controller="de.willuhn.jameica.hbci.payment.web.beans.Passports" />
     <page pattern="^/passports.pintan.html" template="passports.pintan.vm" controller="de.willuhn.jameica.hbci.payment.web.beans.PassportsPinTan" action="load" />
     <page pattern="^/passports.rdh.html"    template="passports.rdh.vm"    controller="de.willuhn.jameica.hbci.payment.web.beans.PassportsRdh" action="store" />
