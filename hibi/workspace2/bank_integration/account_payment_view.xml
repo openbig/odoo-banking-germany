@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_payment_mode_form_bank" model="ir.ui.view">
+            <field name="name">payment.mode.form.bank</field>
+            <field name="model">payment.mode</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="account_payment.view_payment_mode_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/group/field[@name='bank_id']" position="after">
+
+<!--                <form string="Payment Mode" position="inside">   -->
+                    <field name="banking_settings_id" domain ="[('partner_bank_id','=',bank_id)]"/>
+<!--                </form>   -->
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_payment_order_form_banking" model="ir.ui.view">
+            <field name="name">account.payment.order.form.banking</field>
+            <field name="inherit_id" ref="account_payment.view_payment_order_form" />
+            <field name="model">payment.order</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="/form/header/button[@string='Make Payments']" position="replace">
+                        <button name="%(account_payment.action_account_payment_make_payment)s" states="open" string="Make Payments"
+                                     type="action" class="oe_highlight"/> <!-- action instead of object -->
+                    </xpath>
+                    <xpath expr="/form/sheet/div/button[@string='Select Invoices to Pay']" position="replace">
+                        <button name="%(account_payment.action_create_payment_order)s" string="Select Invoices to Pay" type="action" 
+				attrs="{'invisible':[('state','!=','draft')]}" icon="gtk-find"/>
+                    </xpath>
+                    <xpath expr="/form" position="inside">
+                        <field name="exported_file_id" invisible="True"/>
+                    </xpath>  
+                </data>
+            </field>
+        </record>
+
+        <record id="view_banking_payment_order_tree_1" model="ir.ui.view">
+            <field name="name">account.payment.order.tree.banking</field>
+            <field name="inherit_id" ref="account_payment.view_payment_order_tree" />
+            <field name="model">payment.order</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+              <data>
+                 <field name="state" position="after">
+                    <field name="exported_file_id" invisible="True"/>
+                </field>
+              </data>
+            </field>
+        </record>
+
+    </data>
+</openerp>

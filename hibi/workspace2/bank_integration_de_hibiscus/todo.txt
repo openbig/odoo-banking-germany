@@ -1,0 +1,45 @@
+Basic functionality
+
+1. Some code in account_payment module seems to be obsolete.
+Make payment functionality from wizard should be moved to object payment.order
+[DONE]
+
+2. Selecting invoices in Payments doesn't work. It is a bug report for it.
+https://bugs.launchpad.net/openobject-addons/+bug/655865
+By now we have to select manually "Entry line" which is probably the same but has to be done line by line.
+
+[INFO] account_payment_extension seems to be in conflict with hibiscus. This issue was in 5 and probably remains in 6. We have some points we should make hibiscus module dependent of account_payment_extension and use account_payment_extension functionality. But it needs consideration. We have two ways: a. get some code from that module or b. inherit this module and use its functionality as it is. I have no suggestion for it now.
+[TO CONSIDER]
+
+[INFO] account_payment module has posting with other payment currency. AFAIK current hibiscus module works only in home currency.
+[TO CONSIDER]
+[TO DO]
+
+[QUESTION?] Why it is posting during payment order? IMHO posting of payment should be when you have bank statement confirmation.
+[ANSWER] There are other modules playing with that.
+
+Import General
+==============
+[GG OPINION] Maybe separated module? Hmm in account_payment_extension is code for importing incoming payment. IMHO it of course can be in the same module (as it cooperates with hibiscus in meaning of Jameica service) but it should relate to bank statement. I am getting to point that all functionality related to hibiscus should be in one module. But not fully sure yet.
+[DONE] in hibiscus module
+
+Direct import will have problem with currency. It is no currency settings in OpenERP bank statement. So I don't know how currency should be reflected in OpenERP.
+[TO CONSIDER]
+[ANSWER] Again there are some other modules playing with that.
+{AGAIN} It is not true. Journal in Bank statement sets the currency. If currency is not set in Journal currency should be taken from company.
+
+Partner recognition. Now it works only if in OpenERP exists the partner with the same account number and the same Bank BLZ number (placed in account bank description). 
+[GG OPINION] Recognition of Partner by name would be much complicated and dangerous. Not done.
+[AGAIN] More recognition is done. By partner name, by invoice number in transfer description. etc.
+
+Import of bank statement - direct from Jameica
+==========================
+I have done code for import bank statements directly from Hibiscus inside the same module. Needs testing in real environment.
+[TO TEST] We know now that this functionality will not work when server is out of client machine. It seems direct import of from jameica was mistake and will be never used. I use the code for another import - from CSV, which is described below.
+
+Import of bank statement from CSV
+=================================
+[To CONSIDER] How to know the statement line was already imported before? In case above I have added field hibiscus_id to bank statement line and I check before creating the line. In CSV fields there is no such id.
+[DONE] Now I check if the same primanota (Communication in OpenERP) and amount (betrag) already exists in OpenERP the line is not imported. So it is no duplication.
+
+

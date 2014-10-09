@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) EduSense BV <http://www.edusense.nl>
+  All rights reserved.
+  The licence is in the file __terp__.py
+-->
+<openerp>
+    <data>
+
+        <record id="view_banking_bank_statement_tree_2" model="ir.ui.view">
+            <field name="name">account.bank.statement.tree.banking-2</field>
+            <field name="inherit_id" ref="account.view_bank_statement_tree" />
+            <field name="model">account.bank.statement</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <field name="state" position="after">
+                    <field name="imported_file_id" invisible="True" />
+                </field>
+            </field>
+        </record>
+
+        <!-- Add invisible field for identification of import file on bank statements
+        -->
+        <record id="view_banking_bank_statement_form_4" model="ir.ui.view">
+            <field name="name">account.bank.statement.form.banking-4</field>
+            <field name="inherit_id" ref="account.view_bank_statement_form" />
+            <field name="model">account.bank.statement</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                    <xpath expr="/form/sheet/notebook/page/field/tree" position="replace">
+                                <tree string="Statement lines">
+                                    <field name="sequence" readonly="1" invisible="1"/>
+                                    <field name="date"/>
+                                    <field name="name"/>
+                                    <field name="ref"/>
+                                    <field name="partner_id" on_change="onchange_partner_id(partner_id)" domain="['|',('parent_id','=',False),('is_company','=',True)]"/>
+                                    <field name="type" on_change="onchange_type(partner_id, type)"/>
+                                    <field name="account_id" options='{"no_open":True}' domain="[('journal_id','=',parent.journal_id), ('company_id', '=', parent.company_id)]"/>
+                                    <field name="analytic_account_id" groups="analytic.group_analytic_accounting" domain="[('company_id', '=', parent.company_id), ('type', '&lt;&gt;', 'view')]"/>
+                                    <field name="amount"/>
+                                </tree>
+                    </xpath>
+
+
+                <field name="balance_end_real" position="after">
+                    <field name="exported_file_id" invisible="True"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

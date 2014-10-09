@@ -1,6 +1,0 @@
-<info>
-  <name>rxtx</name>
-  <description>native lib providing serial and parallel communication</description>
-  <url>http://www.rxtx.org/</url>
-  <license>LGPL - http://www.gnu.org/licenses/lgpl.html</license>
-</info>

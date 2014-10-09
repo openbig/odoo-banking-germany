@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_banking_import_hibiscus" model="ir.ui.view">
+            <field name="name">account.banking.bank.import.hibiscus</field>
+            <field name="model">account.banking.bank.import</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="bank_integration.view_banking_import"/>
+            <field name="arch" type="xml">
+               <field name="file" position="after">
+			<separator string="Hibiscus Import Parameters" colspan ="4"/>
+			<field name="date_from"/>
+			<field name="date_to"/>
+		</field>
+	    </field>
+        </record>
+    </data>
+</openerp>
