@@ -1,0 +1,321 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+# 	* bank_integration_de_hibiscus
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-11 12:49+0000\n"
+"PO-Revision-Date: 2014-10-11 15:32+0100\n"
+"Last-Translator: openbig.org - Thorsten Vocks <thorsten.vocks@openbig.org>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.5\n"
+
+#. module: bank_integration_de_hibiscus
+#: model:ir.actions.act_window,name:bank_integration_de_hibiscus.action_hibiscus_config_wizard
+msgid "Hibiscus Configure Wizard "
+msgstr "Hibiscus Konfigurationsassistenz"
+
+#. module: bank_integration_de_hibiscus
+#: field:bank.integration.settings,hibiscus_account_id:0
+msgid "Hibiscus Account ID"
+msgstr "Hibiscus-Konto-ID"
+
+#. module: bank_integration_de_hibiscus
+#: field:bank.integration.settings,hibiscus_server:0
+#: field:hibiscus.config.wizard,server:0
+msgid "Server Name"
+msgstr "Server Name"
+
+#. module: bank_integration_de_hibiscus
+#: code:addons/bank_integration_de_hibiscus/hibiscus_config_wizard.py:93
+#, python-format
+msgid " Sub Account: "
+msgstr " Unterkonto:"
+
+#. module: bank_integration_de_hibiscus
+#: view:bank.integration.settings:0 view:hibiscus.config.wizard:0
+msgid "Hibiscus Configuration"
+msgstr "HBCI-Server Konfiguration"
+
+#. module: bank_integration_de_hibiscus
+#: code:addons/bank_integration_de_hibiscus/hibiscus_config_wizard.py:95
+#, python-format
+msgid " Customer No: "
+msgstr " Kundennummer:"
+
+#. module: bank_integration_de_hibiscus
+#: field:bank.integration.settings,hibiscus_secure:0
+#: field:hibiscus.config.wizard,secure:0
+msgid "Secure Connection"
+msgstr "Sichere Verbindung"
+
+#. module: bank_integration_de_hibiscus
+#: field:account.banking.bank.import,date_to:0
+msgid "To Date"
+msgstr "Bis"
+
+#. module: bank_integration_de_hibiscus
+#: field:account.banking.bank.import,date_from:0
+msgid "From Date"
+msgstr "Von"
+
+#. module: bank_integration_de_hibiscus
+#: view:account.banking.bank.import:0
+msgid "Hibiscus Import Parameters"
+msgstr "Hibiscus Importparameter"
+
+#. module: bank_integration_de_hibiscus
+#: help:account.banking.bank.import,date_to:0
+msgid ""
+"End date of transactions to import from Hibiscus into bank statement. Used "
+"only in Hibiscus OnLine import. For other import ignored."
+msgstr ""
+"Das Datum bis zu dem Transaktionen in den Bankauszug zu importieren sind. "
+"Diese Einstellung wirkt sich nur auf den Hibiscus-Online Import aus. Für "
+"allen anderen Importe wird diese Einstellung ignoriert."
+
+#. module: bank_integration_de_hibiscus
+#: code:addons/bank_integration_de_hibiscus/hibiscus_config_wizard.py:94
+#, python-format
+msgid " Description: "
+msgstr " Beschreibung:"
+
+#. module: bank_integration_de_hibiscus
+#: code:addons/bank_integration_de_hibiscus/parser_online.py:273
+#, python-format
+msgid ""
+"Line '%s' has currency: '%s' but Hibiscus account: %s has different currency "
+"'%s'"
+msgstr ""
+"Die Position  '%s' hat die Währung: '%s', während das Hibiscus-Konto %s in "
+"der Währung '%s' geführt wird"
+
+#. module: bank_integration_de_hibiscus
+#: model:ir.model,name:bank_integration_de_hibiscus.model_hibiscus_tools
+msgid "hibiscus.tools"
+msgstr ""
+
+#. module: bank_integration_de_hibiscus
+#: view:hibiscus.config.wizard:0
+msgid ""
+"Enter Hibiscus host parameters. After synchronization some wrong "
+"configuration will be removed."
+msgstr ""
+"Geben Sie die Hibiscus Server Host Parameter ein. Nach einer Synchronisation "
+"werden einige fehlerhafte Einträge entfernt."
+
+#. module: bank_integration_de_hibiscus
+#: code:addons/bank_integration_de_hibiscus/parser_online.py:320
+#, python-format
+msgid "transfer"
+msgstr ""
+
+#. module: bank_integration_de_hibiscus
+#: field:hibiscus.config.wizard,company_id:0
+msgid "Company"
+msgstr "Unternehmen"
+
+#. module: bank_integration_de_hibiscus
+#: field:bank.integration.settings,hibiscus_user:0
+#: field:hibiscus.config.wizard,user:0
+msgid "User Name"
+msgstr "Benutzer"
+
+#. module: bank_integration_de_hibiscus
+#: code:addons/bank_integration_de_hibiscus/parser_csv.py:175
+#, python-format
+msgid ""
+"You have to select a file for settings: %(settings)s with file format "
+"%(format)s."
+msgstr ""
+"Sie müssen für die Einstellung %(settings)s eine Datei im Format %(format)s "
+"auswählen."
+
+#. module: bank_integration_de_hibiscus
+#: code:addons/bank_integration_de_hibiscus/hibiscus_config_wizard.py:132
+#: code:addons/bank_integration_de_hibiscus/parser_online.py:117
+#: code:addons/bank_integration_de_hibiscus/parser_online.py:139
+#: code:addons/bank_integration_de_hibiscus/parser_online.py:258
+#: code:addons/bank_integration_de_hibiscus/parser_online.py:273
+#: code:addons/bank_integration_de_hibiscus/parser_online.py:326
+#: code:addons/bank_integration_de_hibiscus/parser_online.py:331
+#: code:addons/bank_integration_de_hibiscus/parser_online.py:338
+#: code:addons/bank_integration_de_hibiscus/parser_online.py:344
+#, python-format
+msgid "Error!"
+msgstr "Fehler!"
+
+#. module: bank_integration_de_hibiscus
+#: model:ir.model,name:bank_integration_de_hibiscus.model_bank_parsers
+msgid "bank.parsers"
+msgstr ""
+
+#. module: bank_integration_de_hibiscus
+#: view:bank.integration.settings:0
+msgid "Parser Specific Settings"
+msgstr "Spezifische Parsereinstellungen"
+
+#. module: bank_integration_de_hibiscus
+#: field:bank.integration.settings,hibiscus_password:0
+#: field:hibiscus.config.wizard,password:0
+msgid "Password"
+msgstr "Passwort"
+
+#. module: bank_integration_de_hibiscus
+#: code:addons/bank_integration_de_hibiscus/hibiscus_config_wizard.py:75
+#, python-format
+msgid "Bank from Hibiscus"
+msgstr "Bank aus Hibiscus"
+
+#. module: bank_integration_de_hibiscus
+#: code:addons/bank_integration_de_hibiscus/parser_online.py:322
+#, python-format
+msgid "SEPA transfer"
+msgstr "SEPA Transfer"
+
+#. module: bank_integration_de_hibiscus
+#: code:addons/bank_integration_de_hibiscus/hibiscus_config_wizard.py:105
+#, python-format
+msgid "Hibiscus OnLine for "
+msgstr "Hibiscus Online für"
+
+#. module: bank_integration_de_hibiscus
+#: code:addons/bank_integration_de_hibiscus/parser_online.py:139
+#, python-format
+msgid "Cannot import Hibiscus bank statement: %s"
+msgstr "Der folgende Hibiscus Bankauszug konnte nicht eingelesen werden: %s"
+
+#. module: bank_integration_de_hibiscus
+#: model:ir.ui.menu,name:bank_integration_de_hibiscus.menu_action_import_hibiscus_accounts
+msgid "Hibiscus Accounts"
+msgstr "Hibiscus Konten"
+
+#. module: bank_integration_de_hibiscus
+#: model:ir.actions.act_window,name:bank_integration_de_hibiscus.act_import_hibiscus_accounts_wizard
+msgid "Import Hibiscus Accounts"
+msgstr "Importiere Hibiscus Konten"
+
+#. module: bank_integration_de_hibiscus
+#: code:addons/bank_integration_de_hibiscus/parser_csv.py:174
+#, python-format
+msgid "ERROR!"
+msgstr "Fehler !"
+
+#. module: bank_integration_de_hibiscus
+#: view:hibiscus.config.wizard:0
+msgid "Continue"
+msgstr "Weiter"
+
+#. module: bank_integration_de_hibiscus
+#: code:addons/bank_integration_de_hibiscus/parser_online.py:344
+#, python-format
+msgid ""
+"Cannot create %s for \"%s\" because:\n"
+"%s"
+msgstr ""
+"%s kann nicht für \"%s\" erstellt werden, da:\n"
+"%s"
+
+#. module: bank_integration_de_hibiscus
+#: code:addons/bank_integration_de_hibiscus/hibiscus_config_wizard.py:92
+#, python-format
+msgid "Currency: "
+msgstr "Währung"
+
+#. module: bank_integration_de_hibiscus
+#: model:ir.model,name:bank_integration_de_hibiscus.model_hibiscus_config_wizard
+msgid "hibiscus.config.wizard"
+msgstr ""
+
+#. module: bank_integration_de_hibiscus
+#: field:bank.integration.settings,hibiscus_port:0
+#: field:hibiscus.config.wizard,port:0
+msgid "Port Number"
+msgstr "Port Nummer"
+
+#. module: bank_integration_de_hibiscus
+#: view:hibiscus.config.wizard:0
+msgid ""
+"Some new Default Settings for Bank Integration, Banks and Bank Accounts will "
+"be created. Please review them."
+msgstr ""
+"Einige neue Standards werden durch die Bank Integration automatisch "
+"erstellt, z.B. das Bankenverzeichnis oder die Liste mit unseren Bankkonten. "
+"Bitte überprüfen Sie diese Einstellungen."
+
+#. module: bank_integration_de_hibiscus
+#: code:addons/bank_integration_de_hibiscus/parser_online.py:117
+#: code:addons/bank_integration_de_hibiscus/parser_online.py:258
+#, python-format
+msgid "Cannot import Hibiscus account (to check currency): %s"
+msgstr ""
+"Das Hibiscus Konto kann nicht importiert werden (Währung muss geprüft "
+"werden): %s"
+
+#. module: bank_integration_de_hibiscus
+#: code:addons/bank_integration_de_hibiscus/parser_online.py:333
+#, python-format
+msgid "direct debit"
+msgstr "Lastschrift (direct debit)"
+
+#. module: bank_integration_de_hibiscus
+#: code:addons/bank_integration_de_hibiscus/hibiscus_config_wizard.py:96
+#, python-format
+msgid " Comment: "
+msgstr "Kommentar:"
+
+#. module: bank_integration_de_hibiscus
+#: model:ir.model,name:bank_integration_de_hibiscus.model_bank_integration_settings
+msgid "bank.integration.settings"
+msgstr ""
+
+#. module: bank_integration_de_hibiscus
+#: view:hibiscus.config.wizard:0
+msgid "or"
+msgstr "oder"
+
+#. module: bank_integration_de_hibiscus
+#: code:addons/bank_integration_de_hibiscus/hibiscus_config_wizard.py:132
+#, python-format
+msgid "Cannot import Hibiscus accounts: %s"
+msgstr "Folgende Hibiscus Konten nicht importiert werden: %s"
+
+#. module: bank_integration_de_hibiscus
+#: field:bank.integration.settings,payment_mode_ids:0
+msgid "Payment Modes"
+msgstr "Zahlungsmethoden"
+
+#. module: bank_integration_de_hibiscus
+#: view:hibiscus.config.wizard:0
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. module: bank_integration_de_hibiscus
+#: help:account.banking.bank.import,date_from:0
+msgid ""
+"Start date of transactions to import from Hibiscus into bank statement. Used "
+"only in Hibiscus OnLine import. For other import ignored."
+msgstr ""
+"Das Startdatum ab dem Transaktionen von Hibiscus in den Kontoauszug "
+"transferiert werden sollen. Diese Einstellung wird lediglich durch den "
+"Hibiscus OnLine Import benutzt. "
+
+#. module: bank_integration_de_hibiscus
+#: help:bank.integration.settings,hibiscus_account_id:0
+msgid ""
+"Bank Account ID in Hibiscus system. Can be fetched by wizard 'Get Hibiscus "
+"accounts.'"
+msgstr ""
+"Bankkonto-ID im Hibiscus System. Die Konten können durch den Assistenzen "
+"\"Konten abholen\" angefordert werden."
+
+#. module: bank_integration_de_hibiscus
+#: model:ir.model,name:bank_integration_de_hibiscus.model_account_banking_bank_import
+msgid "account.banking.bank.import"
+msgstr ""
