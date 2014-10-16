@@ -29,10 +29,10 @@
     'name': 'Bank Integration',
     'version': '1.11 (7.0)',
     'license': 'GPL-3',
-    'author': 'Grzegorz Grzelak OpenGLOBE (based on EduSense and Therp)',
-    'website': 'http://www.openglobe.pl',
+    'author': 'Grzegorz Grzelak - OpenBIG.org (based on EduSense and Therp)',
+    'website': 'http://www.openbig.org',
     'category': 'Account Banking',
-    'depends': ['base', 'account', 'base_iban', 'account_payment',"account_voucher"],
+    'depends': ['base', 'account', 'base_iban', 'account_payment','account_voucher'],
     'init_xml': [],
     'update_xml': [
         'security/ir.model.access.csv',
