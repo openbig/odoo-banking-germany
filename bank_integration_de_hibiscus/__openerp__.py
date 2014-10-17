@@ -1,7 +1,10 @@
 ##############################################################################
 #
-#    Copyright (C) 2012 OpenGLOBE (<http://www.openglobe.pl>).
-#    All Rights Reserved
+#    OpenERP, Open Source Management Solution
+#    Copyright (C) 2004-2014 OpenERP SA (<http://www.odoo.com>).
+#
+#    Module Account Bank Integration - Hibiscus Parser
+#    Copyright (C) 2010-2014 big-consulting GmbH (www.openbig.org)
 #
 #    WARNING: This program as such is intended to be used by professional
 #    programmers who take the whole responsability of assessing all potential
@@ -25,10 +28,10 @@
 ##############################################################################
 {
     'name': 'Account Bank Integration - Hibiscus Parser',
-    'version': '0.02 (7.0)',
+    'version': '0.04 (7.0)',
     'license': 'GPL-3',
-    'author': 'OpenGLOBE',
-    'website': 'http://www.openglobe.pl',
+    'author': 'Grzegorz Grzelak / Thorsten Vocks for openbig.org',
+    'website': 'http://www.openbig.org',
     'category': 'Account Banking',
     'depends': ['base', 'account', 'base_iban', 'account_payment', 'bank_integration'],
     'init_xml': [],
@@ -42,18 +45,18 @@
     ],
     'demo_xml': [],
     'description': '''
-Hibiscus Online and CSV Parser Module for bank integration.
+     Hibiscus Online and CSV Parser Module for bank integration.
 
-The module contains two pairs of parser
+     The module contains two pairs of parser
 
-1. Online Hibiscus parser import and export.
-2. CSV Hibiscus parser import and export.
+     1. Online Hibiscus parser import and export.
+     2. CSV Hibiscus parser import and export.
 
-For SSLv3 on Ubuntu requires:
+     For SSLv3 on Ubuntu requires:
 
-sudo apt-get install python-dev
+     sudo apt-get install python-dev
 
-sudo apt-get install python-m2crypto
+     sudo apt-get install python-m2crypto
     ''',
     'active': False,
     'installable': True,
