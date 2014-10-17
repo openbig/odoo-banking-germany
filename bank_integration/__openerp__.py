@@ -1,6 +1,6 @@
 ##############################################################################
 #
-#    Copyright (C) 2012 OpenGLOBE (<http://www.openglobe.pl>).
+#    Copyright (C) 2012-2014 OpenGLOBE (<http://www.openglobe.pl>).
 #    All Rights Reserved
 #    Copyright (C) 2009 EduSense BV (<http://www.edusense.nl>).
 #    All Rights Reserved
@@ -29,10 +29,10 @@
     'name': 'Bank Integration',
     'version': '1.11 (7.0)',
     'license': 'GPL-3',
-    'author': 'Grzegorz Grzelak OpenGLOBE (based on EduSense and Therp)',
+    'author': 'Grzegorz Grzelak - OpenGlobe.pl (based on EduSense and Therp)',
     'website': 'http://www.openglobe.pl',
     'category': 'Account Banking',
-    'depends': ['base', 'account', 'base_iban', 'account_payment',"account_voucher"],
+    'depends': ['base', 'account', 'base_iban', 'account_payment','account_voucher'],
     'init_xml': [],
     'update_xml': [
         'security/ir.model.access.csv',
