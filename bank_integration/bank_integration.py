@@ -100,7 +100,7 @@ class bank_integration_settings(osv.osv):
             ],
             'Partner Matching', help = "No Matching - No partner matching. " \
                     "\nMatch Only By Bank Account - Look only for known Partners by Bank Account. Applied before all next options."\
-                    "\nPartner Matching by Name - Look for Partner by Partner Name in description."\
+                    "\nPartner Matching by Name - Look for Partner by Partner Name in description. If no matching, it search for partner's reference in description."\
                     "\nPartner Matching by Invoice Number - Look for Invoice Numbers in Description and match Partners and Invoice."\
                     "\nCreate Partner When No Match - Create Partner from Bank Statement data."\
                     "\nMatch to Unknown Partner - Assign transaction to partner with name 'Unknown' for farther processing. "\

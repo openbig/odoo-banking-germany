@@ -126,11 +126,29 @@ class import_wizard(osv.osv_memory):
     def search_partner(self,cr, uid, transaction, country_id, context=None):
 # TODO Searching within company
         partner_obj = self.pool.get('res.partner')
+        move_line_obj = self.pool.get('account.move.line')
 #        address_obj = self.pool.get('res.partner.address')
         logger = logging.getLogger()
         logger.warn("SEARCH_PARTNER")
         logger.warn(transaction)
-        partner_ids = partner_obj.search(cr, uid, [('name', 'ilike', transaction['partner_name'])])
+        partner_ids = []
+        all_partner_ids = partner_obj.search(cr, uid, [])
+        for partner in partner_obj.browse(cr, uid, all_partner_ids, context):
+            if partner.name.lower() == transaction['partner_name'].lower():
+                if partner.id not in partner_ids:
+                    partner_ids.append(partner.id)
+        # partner_ids = partner_obj.search(cr, uid, [('name', 'ilike', transaction['partner_name'])])
+        if not partner_ids:
+            move_line_ids = move_line_obj.search(cr, uid, [
+                ('reconcile_id', '=', False),
+                ('account_id.reconcile', '=', True),
+            ],order='date')
+            move_line_browser= move_line_obj.browse(cr, uid, move_line_ids, context)
+            for move_line_br in move_line_browser:
+                if move_line_br.partner_id.ref:
+                    if move_line_br.partner_id.ref.lower() in transaction['note'].lower():
+                        if move_line_br.partner_id.id not in partner_ids:
+                            partner_ids.append(move_line_br.partner_id.id)
 #        entry_ids =[]
 #        for partner in prtner_obj.browse(cr, uid, partner_ids, context):
 #            partner_entry = partner
