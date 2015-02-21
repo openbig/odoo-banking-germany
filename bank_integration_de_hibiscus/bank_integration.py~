@@ -73,17 +73,10 @@ class hibiscus_tools(osv.osv_memory):
 
 #        logger.warn("URL: %s", url)
         if secure:
-            server = xmlrpclib.ServerProxy(url)
-            try:
-                accounts = getattr(server,'hibiscus.xmlrpc.konto.find')()
-            except Exception, e:
-                if str(e) == "wrong version number":
-                    from M2Crypto import m2xmlrpclib, SSL
-                    ctx = SSL.Context('sslv3')
-                    SSL.Connection.clientPostConnectionCheck = None
-                    server = xmlrpclib.ServerProxy(url,transport = m2xmlrpclib.SSL_Transport(ctx))
-                else:
-                    raise osv.except_osv(_('Error!'),_('Cannot import Hibiscus accounts: %s')%e)
+            from M2Crypto import m2xmlrpclib, SSL
+            ctx = SSL.Context('sslv3')
+            SSL.Connection.clientPostConnectionCheck = None
+            server = xmlrpclib.ServerProxy(url,transport = m2xmlrpclib.SSL_Transport(ctx))
         else:
             server = xmlrpclib.ServerProxy(url)
         return server

@@ -28,7 +28,7 @@
 ##############################################################################
 {
     'name': 'Account Bank Integration - Hibiscus Parser',
-    'version': '0.05 (7.0)',
+    'version': '0.04 (7.0)',
     'license': 'GPL-3',
     'author': 'Grzegorz Grzelak / Thorsten Vocks for openbig.org',
     'website': 'http://www.openbig.org',
